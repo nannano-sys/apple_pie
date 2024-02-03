@@ -19,15 +19,11 @@ class Welcome extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
+	 
 	//  トップページ
 	public function index()
 	{
-		$ua = $_SERVER['HTTP_USER_AGENT'];
-		if(preg_match('/Android/', $ua) || preg_match('/iPhone/', $ua)){
-			$this->view('post_top_sp.tpl');
-		}else{
-			$this->view('post_top.tpl');
-		}
 		// $this->load->view('welcome_message');
+		$this->view('post_top.tpl');
 	}
 }

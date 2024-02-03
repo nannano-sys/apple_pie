@@ -42,18 +42,18 @@ body {
 }
 
 .hoge-item {
-  width: calc(33.33% + 185px * 2 / 3);
+  width: calc(33.33% - 30px * 2 / 3);
   margin-right: 30px;
   margin-top: 30px;
   background-color: #fff;
-  /* padding: 30px; */
+  padding: 30px;
 }
 
 .hoge-item:nth-child(3n) {
   /* margin-right: 0; */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 960px) {
   .hoge-item {
     width: calc(50% - 30px / 2);
     margin-right: 30px;
@@ -72,7 +72,7 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .hoge-item {
     width: 100%;
     /* margin-right: 0; */
