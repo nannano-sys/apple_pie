@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Post extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -19,14 +19,14 @@ class Welcome extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
-	//  トップページ
+	//ポスト詳細
 	public function index()
 	{
 		$ua = $_SERVER['HTTP_USER_AGENT'];
 		if(preg_match('/Android/', $ua) || preg_match('/iPhone/', $ua)){
-			$this->view('post_top_sp.tpl');
+			$this->view('post_sp.tpl');
 		}else{
-			$this->view('post_top.tpl');
+			$this->view('post_pc.tpl');
 		}
 		// $this->load->view('welcome_message');
 	}
