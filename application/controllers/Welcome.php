@@ -21,12 +21,12 @@ class Welcome extends CI_Controller {
 		}
 		$ua = $_SERVER['HTTP_USER_AGENT'];
 		if(preg_match('/Android/', $ua) || preg_match('/iPhone/', $ua)){
-			$this->smarty->assign("post", $post);
-			$this->view('post_top_sp.tpl');
+			$ua = "sp";
 		}else{
-			$this->smarty->assign("post", $post);
-			$this->view('post_top.tpl');
+			$ua = "pc";
 		}
+		$this->smarty->assign("ua", $ua);
+		$this->view('post_top.tpl');
 		// $this->load->view('welcome_message');
 	}
 }

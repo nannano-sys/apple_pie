@@ -1,66 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>洋館探訪</title>
-    <link href="application/css/reset.css" rel="stylesheet" />
-    <link rel="stylesheet" href="application/css/index.css">
-    <link rel="stylesheet" href="application/css/hamburger.css">
-    <!-- <link　href="https://unpkg.com/sanitize.css" rel="stylesheet"/> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="application\css\index.css">
+    <title>ブログ記事一覧</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script type="text/javascript" src="application/js/hamburger.js"></script>
 </head>
+<header class="header">
+    <div class="logo">LOGO</div>
+    <button class="hamburger-menu" id="js-hamburger-menu">
+        <span class="hamburger-menu__bar"></span>
+        <span class="hamburger-menu__bar"></span>
+        <span class="hamburger-menu__bar"></span>
+    </button>
+    <nav class="navigation">
+        <ul class="classList">
+            <li class="navigation__list-item"><a href="#" class="navigation__link">会社情報</a></li>
+            <li class="navigation__list-item"><a href="#" class="navigation__link">事業紹介</a></li>
+            <li class="navigation__list-item"><a href="#" class="navigation__link">お知らせ</a></li>
+            <li class="navigation__list-item"><a href="#" class="navigation__link">お問い合わせ</a></li>
+        </ul>
+    </nav>
+</header>
 
 <body>
-    <header class="header">
-        <div><a href="/">ブログです</a></div>
-        <nav class="header__nav nav" id="js-nav">
-            <ul class="nav__items nav-items">
-                <li class="nav-items__item"><a href="">メニュー</a></li>
-                <li class="nav-items__item"><a href="">メニュー</a></li>
-                <li class="nav-items__item"><a href="">メニュー</a></li>
-                <li class="nav-items__item"><a href="">メニュー</a></li>
-            </ul>
-        </nav>
-        <div class='hamburger_btn_wrapper'>
-            <button class="header__hamburger hamburger" id="js-hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        </div>
-    </header>
-    <article>
-        {if $post}
-            {foreach $post as $item}
-                <div class="content">
-                    <ul class="hoge-list">
-                        <li class="hoge-item">
-                            <a href="/post" class="hoge-item-link">
-                                <div class="hoge-item-picture"><img src="https://image.jimcdn.com/app/cms/image/transf/none/path/s801baca4fdd4a1c3/image/i99629c914f61d576/version/1524213874/image.jpg" alt="洋館の画像"></div>
-                                <div class="hoge-item-body">
-                                    <div class="hoge-item-title">{$item.post_title}</div>
-                                    <div class="hoge-item-text">{$item.post_content}</div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+    <div class="card-grid {$ua}">
+        <!-- Card 1 -->
+        <article class="card">
+            <a href="#">
+                <img src="https://e1a4c9d0d2f9f737c5e1.ucr.io/https://create.xyz/api/ai-img?prompt=Article%2520Thumbnail%25202"
+                    alt="Article Thumbnail 1" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">正義Tシャツ</h3>
+                    <p class="card-text">ごく普通の生地の白いTシャツに油性マジックで「正義」と書いただけの架空の半袖Tシャツです。</p>
                 </div>
-            {/foreach}
-        {else}
-            <div>投稿はまだありません。</div>
-        {/if}
-        <div class="side">
-            <p>サイドバー</p>
-        </div>
-    </article>
-    <footer class="hooter">
-        建物探訪
-    </footer>
+            </a>
+        </article>
+        <article class="card">
+            <img src="article-1.jpg" alt="Article Thumbnail 1" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">正義Tシャツ</h3>
+                <p class="card-text">ごく普通の生地の白いTシャツに油性マジックで「正義」と書いただけの架空の半袖Tシャツです。</p>
+            </div>
+        </article>
+        <article class="card">
+            <img src="article-1.jpg" alt="Article Thumbnail 1" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">正義Tシャツ</h3>
+                <p class="card-text">ごく普通の生地の白いTシャツに油性マジックで「正義」と書いただけの架空の半袖Tシャツです。</p>
+            </div>
+        </article>
+        <article class="card">
+            <img src="article-1.jpg" alt="Article Thumbnail 1" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">正義Tシャツ</h3>
+                <p class="card-text">ごく普通の生地の白いTシャツに油性マジックで「正義」と書いただけの架空の半袖Tシャツです。</p>
+            </div>
+        </article>
+        <article class="card">
+            <img src="article-1.jpg" alt="Article Thumbnail 1" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">正義Tシャツ</h3>
+                <p class="card-text">ごく普通の生地の白いTシャツに油性マジックで「正義」と書いただけの架空の半袖Tシャツです。</p>
+            </div>
+        </article>
+        <article class="card">
+            <img src="article-1.jpg" alt="Article Thumbnail 1" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">正義Tシャツ</h3>
+                <p class="card-text">ごく普通の生地の白いTシャツに油性マジックで「正義」と書いただけの架空の半袖Tシャツです。</p>
+            </div>
+        </article>
+        <article class="card">
+            <img src="article-1.jpg" alt="Article Thumbnail 1" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">正義Tシャツ</h3>
+                <p class="card-text">ごく普通の生地の白いTシャツに油性マジックで「正義」と書いただけの架空の半袖Tシャツです。</p>
+            </div>
+        </article>
+        <article class="card">
+            <img src="article-1.jpg" alt="Article Thumbnail 1" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">正義Tシャツ</h3>
+                <p class="card-text">ごく普通の生地の白いTシャツに油性マジックで「正義」と書いただけの架空の半袖Tシャツです。</p>
+            </div>
+        </article>
+        <article class="card">
+            <img src="article-1.jpg" alt="Article Thumbnail 1" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">正義Tシャツ</h3>
+                <p class="card-text">ごく普通の生地の白いTシャツに油性マジックで「正義」と書いただけの架空の半袖Tシャツです。</p>
+            </div>
+        </article>
+        <article class="card">
+            <img src="article-1.jpg" alt="Article Thumbnail 1" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">正義Tシャツ</h3>
+                <p class="card-text">ごく普通の生地の白いTシャツに油性マジックで「正義」と書いただけの架空の半袖Tシャツです。</p>
+            </div>
+        </article>
+        <article class="card">
+            <img src="article-1.jpg" alt="Article Thumbnail 1" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">正義Tシャツ</h3>
+                <p class="card-text">ごく普通の生地の白いTシャツに油性マジックで「正義」と書いただけの架空の半袖Tシャツです。</p>
+            </div>
+        </article>
+        <article class="card">
+            <img src="article-1.jpg" alt="Article Thumbnail 1" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">正義Tシャツ</h3>
+                <p class="card-text">ごく普通の生地の白いTシャツに油性マジックで「正義」と書いただけの架空の半袖Tシャツです。</p>
+            </div>
+        </article>
+        <!-- Add more cards here (up to 24) -->
+        <!-- ... -->
+    </div>
 </body>
 
+</html>
+
 <script>
-    console.log("%cなにみてんだよオメー",
-        "font-size:30px; padding:2px 4px; border-radius:4px;font-family: 'ＭＳ 明朝', 'MS Mincho',sans-serif; font-weight: bold; background-color:#EEEEEE;"
-        );
+$(document).ready(function() {
+    const hamburgerButton = $('#js-hamburger-menu');
+    const navigation = $('.navigation');
+    let is_nav_show = false;
+
+    hamburgerButton.on('click', function() {
+        navigation.toggleClass('active');
+        hamburgerButton.toggleClass('active'); // メニューの表示・非表示を切り替え
+        if(!is_nav_show){
+            navigation.toggleClass('fadeInAnime')
+            // navigation.animate({ top: '50px' }, 600);
+            is_nav_show = true;
+        }else{
+            // navigation.hide()
+            navigation.removeClass('fadeInAnime')
+            is_nav_show = false;
+        }
+    });
+});
 </script>
